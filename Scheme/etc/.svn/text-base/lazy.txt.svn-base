@@ -1,0 +1,30 @@
+(definerec ones (cons 1 (delay ones)))
+(definerec (from n) (cons n (delay (from (+ n 1)))))
+(define naturals (from 0))
+(define (stream_hd s) (car s))
+(define (stream_tl s) (force (cdr s)))
+
+(definerec (nth s n)
+  (if (= n 0)
+      (stream_hd s)
+      (nth (stream_tl s) (- n 1))))
+
+(definerec (from_list l)
+  (if (null l)
+      ()
+      (cons (car l) (delay (from_list (cdr l))))))
+
+(definerec (to_list stream)
+  (if (null stream)
+      ()
+      (cons (car stream) (to_list (stream_tl stream)))))
+
+(definerec (take n s)
+  (if (<= n 0) ()
+    (if (null s) ()
+      (cons (stream_hd s) (take (- n 1) (stream_tl s))))))
+
+(definerec (drop n s)
+  (if (<= n 0) s
+    (if (null s) s
+      (drop (- n 1) (stream_tl s)))))

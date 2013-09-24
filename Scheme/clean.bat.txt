@@ -1,0 +1,15 @@
+@echo off
+
+:: Deletes all compiled files.
+
+del interpreter.exe
+del *.cmo
+del *.cmi
+cd Parser
+del *.cmo
+del *.cmi
+del *.ml
+del *.mli
+del *.output
+
+pause

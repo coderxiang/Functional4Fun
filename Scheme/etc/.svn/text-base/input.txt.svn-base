@@ -1,0 +1,5 @@
+(definerec fact (lambda x (if (= x 0) 1 (* x (fact (- x 1))))))
+(definerec length (lambda x (if (null x) 0 (+ 1 (length (cdr x))))))
+(definerec advance (lambda x (if (= x 0) (list 0) (cons x (advance (- x 1))))))
+(define rev (letrec rev2 (lambda (x y) (if (null x) y (rev2 (cdr x) (cons (car x) y)))) (lambda x (rev2 x nil))))
+(definerec fib (lambda x (if (<= x 1) (advance x) (let z (fib (- x 1)) (cons (+ (car z) (car (cdr z))) z)))))
