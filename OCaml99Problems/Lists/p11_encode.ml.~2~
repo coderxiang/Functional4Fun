@@ -1,0 +1,6 @@
+type 'a rle =
+    | One of 'a
+    | Many of (int * 'a);;
+
+let rec encode (l: 'a list) : (ret: 'a rle list) = 
+  
