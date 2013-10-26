@@ -1,9 +1,0 @@
-(* Extract a slice from a list. *)
-
-
-let slice l a b = 
-  let rec take l n = 
-	let rec take_tr l n acc = 
-	  match l with
-		[] -> acc
-	  | x :: xs -> if n = 0 then List.rev acc else take_tr xs (n-1) (x::acc)
