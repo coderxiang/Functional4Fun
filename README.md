@@ -9,3 +9,5 @@ Some simple problems implemented using OCaml/Scala/Haskell
 - A simplified scheme interpreter
 
 - Some algorithm contest (codeforces) problems
+
+- Concurrency: mutex, conditional varaible
