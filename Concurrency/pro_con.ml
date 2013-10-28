@@ -12,7 +12,7 @@ let produce () =
   Mutex.lock m2;
   while !cnt = buffer_size do Condition.wait not_full m2 done;
   
-  cnt := !cnt + 1;
+  incr cnt;
   print_string ("One more item is added to the buffer, now with size " ^
   (string_of_int !cnt) ^ "\n");
   flush stdout;
@@ -24,7 +24,7 @@ let consume () =
   Mutex.lock m2;
   while !cnt = 0 do Condition.wait not_empty m2 done;
   
-  cnt := !cnt - 1;
+  decr cnt;
   print_string ("One more item is removed to the buffer, now with size " ^
   (string_of_int !cnt) ^ "\n");
   flush stdout;
