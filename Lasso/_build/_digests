@@ -1,0 +1,6 @@
+"Resource: /home/shuo/Dropbox/Program/OCaml/Lasso/test_lasso.ml": "M\131\211n\178L\202\176GG1\b\155\217\137]"
+"Rule: ocaml: ml & cmi -> cmx & o (%=test_lasso )": "\160E\167\240\\wU\188\164\155\202\023X,\142\002"
+"Rule: ocaml dependencies ml (%=test_lasso )": "z\t\218\152\137]Y\000\155\251\129Q\014\175x\183"
+"Rule: ocaml: ml -> cmo & cmi (%=test_lasso )": "\200nh\003\135\153\206yJ\209=\030\185\026\209\199"
+"Resource: /home/shuo/Dropbox/Program/OCaml/Lasso/test_lasso.native": "\218\147R\181U\181z\164\142\243\167U\241\130\165\193"
+"Rule: ocaml: cmx* & o* -> native (%=test_lasso )": "\177\167\132\237S-\201\160'\236\222\143\182\020\182i"

@@ -11,3 +11,5 @@ Some simple problems implemented using OCaml/Scala/Haskell
 - Some algorithm contest (codeforces) problems
 
 - Concurrency: mutex, conditional varaible
+
+- Lasso: an lasso implementation using [lacaml](https://bitbucket.org/mmottl/lacaml)

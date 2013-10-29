@@ -1,0 +1,10 @@
+### Starting build.
+# Target: test_lasso.ml.depends, tags: { extension:ml, file:test_lasso.ml, ocaml, ocamldep, package(bigarray), package(lacaml), package(str), package(unix), quiet }
+ocamlfind ocamldep -package unix -package str -package lacaml -package bigarray -modules test_lasso.ml > test_lasso.ml.depends # cached
+# Target: test_lasso.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:test_lasso.cmo, file:test_lasso.ml, implem, ocaml, package(bigarray), package(lacaml), package(str), package(unix), quiet }
+ocamlfind ocamlc -c -package unix -package str -package lacaml -package bigarray -o test_lasso.cmo test_lasso.ml # cached
+# Target: test_lasso.cmx, tags: { compile, extension:cmx, extension:ml, file:test_lasso.cmx, file:test_lasso.ml, implem, native, ocaml, package(bigarray), package(lacaml), package(str), package(unix), quiet }
+ocamlfind ocamlopt -c -package unix -package str -package lacaml -package bigarray -o test_lasso.cmx test_lasso.ml # cached
+# Target: test_lasso.native, tags: { dont_link_with, extension:native, file:test_lasso.native, link, native, ocaml, package(bigarray), package(lacaml), package(str), package(unix), program, quiet }
+ocamlfind ocamlopt -linkpkg -package unix -package str -package lacaml -package bigarray test_lasso.cmx -o test_lasso.native # cached
+# Compilation successful.
